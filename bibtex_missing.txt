@@ -1,0 +1,4 @@
+以下记录作者元数据尚待核实，未编造写入BibTeX。可从官方页导出。
+p-611068ade0 AB-UPT: Scaling Neural CFD Surrogates for High- Fidelity Automotive Aerodynamics Simulations via Anchored- Branched Universal Physics Transformers
+p-25fc5b73d1 Learning Deformable Body Interactions With Adaptive Spatial Tokenization
+p-912b3e88d4 Adaptive Mesh Quantization for Neural PDE Solvers
