@@ -1,14 +1,15 @@
-# PAL_王师AI_Lab · AI4PDE 2026 文献数据与覆盖说明
+# PAL_王师AI_Lab · AI4PDE 文献数据与覆盖说明
 
-截至2026-10-15。首版公开数据。
+内容更新：2026-10-15。正式记录 260 条，其中已依据全文的方法、实验及相关附录补充解读 256 条。其余条目的具体访问限制在详情页说明。
 
-正式索引 260 条；其中全文核读 28 条，其余摘要级。正式索引指存在发表/录用依据及全文入口，不等于全部全文访问已独立验证。
+“全文解读”表示核对了所标明版本中的相关章节，不表示代码复现、重新证明所有定理或独立重复实验。各条目的输入输出、训练设置、泛化变化、对照、结果和局限均对应其具体任务；不适用的字段说明原因。
 
 ## 当前记录数量
 
 - AAAI 2026: 17
 - Computer Methods in Applied Mechanics and Engineering: 9
-- ICLR: 37
+- ICLR: 34
+- ICLR Journal Track: 3
 - ICML: 89
 - IJCAI 2026: 6
 - JMLR: 9
@@ -21,25 +22,28 @@
 - TMLR: 23
 - UAI 2026: 4
 
-## 范围和方法
+## 文献范围和版本
 
-- 会议：ICML、ICLR、NeurIPS、AAAI、KDD、IJCAI、UAI 2026。不同track独立标注，不把workshop当主会。
-- 期刊：NMI、NC、JMLR、TMLR、JCP、CMAME、Neural Networks。2026卷期/已在线发表条目按官方日期记录，不覆盖尚未发表的未来文章。
-- 分类采用八个主类与交叉标签，架构和泛化实证优先，纯理论作为补充。
-- 会议以官方目录及摘要关键词筛选；期刊结合官方年度目录、Crossref出版元数据与候选官方页面检索。未命中关键词的相关论文可能遗漏。
-- NeurIPS来自2026官方展示数据，按OpenReview标识去重、核对accept决定及track。正式论文集未出版不妨碍已核录用论文入库。
-- ICML结合PMLR与活动目录；ICLR结合官方活动目录和OpenReview。已发现ICLR独立正式论文集入口，后续继续对照作者及版本，避免将报告人误当完整作者名单。
-- 同名早期预印本/撤回投稿不单独计数；跨会投稿历史不等于多次正式发表。
+- 会议覆盖ICML、ICLR、NeurIPS、AAAI、KDD、IJCAI、UAI 2026的相关正式录用或展示记录。
+- 期刊覆盖Nature Machine Intelligence、Nature Communications、JMLR、TMLR、Journal of Computational Physics、Computer Methods in Applied Mechanics and Engineering、Neural Networks的2026相关条目。
+- ICLR Journal Track为期刊论文的会议展示。原始发表年份单独标明，不计作2026主会新论文；不把workshop当主会。
+- NeurIPS依据官方2026展示数据与录用决定；正式论文集尚未出版不妨碍有录用依据的条目入库。
+- 优先阅读神经算子架构、泛化迁移、预训练与PDE基础模型，兼顾物理约束、时间演化、逆问题、理论及数据评测。邻近领域条目说明与PDE的实际关系。
+- 若读到的是作者预印本而非最终出版版，解读版本和差异在记录中标明，不把旧版数值无条件归于最终版。
+- 本库不是穷尽式综述。官方目录规模、关键词筛选数量与精读数量不能混用。
 
-## 尚待完成
+## 结果解读与使用
 
-- 首轮不是穷尽式综述，大部分记录是摘要级，不据此推断完整超参数、最强对照或OOD设置。
-- 部分官方PDF入口已列出，但本次网络访问未完成；可用性在逐篇fulltext_access字段说明。
-- 代码链接可访问不代表代码可运行、数据开放或复现成功。404/受限链接不宣称开源可复现。
-- 少数作者信息及出版引用仍待核对，不生成缺作者的引用条目。BibTeX入口保留原来源版本，不将arXiv条目伪造成正式卷页。
-- 官方目录规模只是筛选范围，不是精读数量。各来源目录存在跨track、重复展示和论文数差异，不能简单加总为领域论文数。
-- 不上传/转载付费PDF。分享原文和作者合法公开版本链接。
+- 数值为原论文在具体任务、划分、预算与指标下报告的结果；单项最好、平均最好和所有任务最好明确区分。
+- 明确区分同轨迹时间帧划分、新轨迹/新几何测试、分辨率变化、参数插值/外推，以及微调与零样本迁移。
+- 对正文叙述与表格存在差异的地方保留具体来源与限定，不擅自补造数据。
+- 代码入口被发现或可访问，不代表已运行复现、数据完整开放或结果已独立验证。
+- 不托管论文PDF，只提供官方页面与合法公开版本入口。论文版权归作者和出版方所有。
+- 网页与papers.json同步；catalog.xlsx用于筛选和个人笔记，references.bib用于引用导出。个人收藏只保存在本机浏览器。
 
-## 审阅建议
+## 尚未完成全文解读的条目
 
-先看五篇HTML卡片确认文字深度，再用Excel筛选主类和阅读深度。数据、示例和页面均为审阅版，获得确认后再上传公开仓库。
+- Information-Coupled neural operator for computational mechanics and parametric PDEs：论文全文未取到；已实际读作者公开架构与三个实验脚本、README结果图。
+- Quantum neural operators with implicit quadratic frame and expressivity advantages：已读出版社完整补充材料和作者官方实现README；主文订阅限制。官方PDF为订阅HTML，作者主页/arxiv/仓库无同版本主文；缺口明确限定为主文实验表及实施协议。
+- DIMENSION DOMAIN CO-DECOMPOSITION: SOLVING PDES WITH INTERPRETABILITY：直接PDF及web open仍被OpenReview browser verification阻挡；公开搜索索引实际读取TMLR旧稿p4 §3–3.1，实验/附录未能获取。
+- Wavenumber-Resolved Spectral Gating for Diffusion Models of Two-Dimensional Turbulence：论文PDF受OpenReview验证/403阻挡；实际阅读作者WRSG.py的方法、配置、拆分和OOD实现；TMLR仅摘要。

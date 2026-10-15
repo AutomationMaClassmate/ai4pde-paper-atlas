@@ -29,3 +29,11 @@
 ICML、ICLR、NeurIPS、AAAI、KDD、IJCAI、UAI 2026。
 Nature Machine Intelligence、Nature Communications、JMLR、TMLR、Journal of Computational Physics、Computer Methods in Applied Mechanics and Engineering、Neural Networks。
 2026年截至2026-10-15已录用或正式发表，阅读全文状态逐条标注。
+
+## 全文解读更新
+
+本轮逐条补充方法、输入输出、训练/测试设置、实际泛化变化、对照、结果和局限，并记录原文章节或表格定位。具体阅读范围见每条的全文访问状态和解读版本。部分全文解读可在阅读深度筛选中单独查看。
+
+ICLR Journal Track条目保留2026会议展示信息，并明确其TMLR原始发表年份；引用文件按原始期刊论文著录。论文主文无法访问的条目不以代码默认配置冒充论文实验证据。
+
+当前数量、版本限定和仍待补充全文的清单见 [coverage.md](coverage.md)。
